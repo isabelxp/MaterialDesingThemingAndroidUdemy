@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common_padding_default"
+    tools:context=".fragments.CardFragment">
+
+   <com.google.android.material.card.MaterialCardView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="@dimen/common_padding_min"
+       android:layout_marginEnd="@dimen/common_padding_min"
+       android:layout_marginTop="@dimen/common_padding_min"
+       android:clickable="true"
+       android:focusable="true">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:paddingTop="@dimen/common_padding_default"
+           android:paddingStart="@dimen/common_padding_default"
+           android:paddingEnd="@dimen/common_padding_default">
+
+           <androidx.appcompat.widget.AppCompatImageView
+               android:id="@+id/img_small"
+               android:layout_width="@dimen/card_img_size"
+               android:layout_height="@dimen/card_img_size"
+               android:src="@mipmap/ic_launcher"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <com.google.android.material.button.MaterialButton
+               android:id="@+id/btnFirst"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/status_enabled"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/img_small"
+               style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+
+           <com.google.android.material.button.MaterialButton
+               android:id="@+id/btnSecond"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/common_padding_min"
+               android:text="@string/status_default"
+               app:layout_constraintStart_toEndOf="@+id/btnFirst"
+               app:layout_constraintTop_toTopOf="@+id/btnFirst"
+               style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+           <TextView
+               android:id="@+id/textView3"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:text="@string/card_title_demo"
+               android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="0dp"
+               android:text="@string/card_message_demo_small"
+               android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+               app:layout_constraintBottom_toTopOf="@+id/btnFirst"
+               app:layout_constraintEnd_toStartOf="@+id/img_small"
+               app:layout_constraintStart_toStartOf="@+id/textView3"
+               app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+           </TextView>
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </com.google.android.material.card.MaterialCardView>
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_padding_min"
+        android:layout_marginEnd="@dimen/common_padding_min"
+        android:layout_marginTop="@dimen/common_padding_min">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imgCardLarge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButton2"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/status_default"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chip4" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/appCompatRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="4.5"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                style="?ratingBarStyleSmall"
+                />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/card_title_demo"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                app:firstBaselineToTopHeight="@dimen/card_baseline_topTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgCardLarge" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/card_title_demo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatRatingBar" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/divider_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_title_demo"
+                android:checkable="true"
+                app:closeIconEnabled="true"
+                app:checkedIcon="@drawable/ic_baseline_favorite_24"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/chip4"
+                app:layout_constraintStart_toEndOf="@+id/chip4"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatRatingBar" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+</LinearLayout>
